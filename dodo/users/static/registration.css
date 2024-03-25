@@ -1,0 +1,22 @@
+
+/* форма логина */
+.form {
+    position: absolute;
+    margin-top:5%;
+    margin-left: 20%;
+    
+    padding: 1%;
+    margin-right: 1%;
+    border: 1.5px solid black;
+    border-radius: 5px;
+}
+
+.button_to_submit {
+    background-color: white;
+    border: 1px solid black;
+    font-size: 1em;
+}
+
+.redirect_to_log_reg {
+    font-style: none;
+}
