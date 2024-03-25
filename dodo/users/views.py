@@ -38,18 +38,12 @@ class LoginView(View):
         return render(request, 'login.html', {'form': LoginUserForm})
     
     def post(self, request):
-        print('1 точка')
         form = LoginUserForm(request.POST)
-        print('2 точка')
         if form.is_valid():
-            print('3 точка')
             data = form.cleaned_data
-            print('4 точка')
-            print(data)
             
             user = authenticate(request, username=data['username'],
                                 password=data['password'],)
-            print(user)
             if user:
                 login(request, user)
                 return redirect('my_profile')
