@@ -15,17 +15,14 @@
 <body>
 
     <div class="form">
-        <h1>Login</h1>
-            <form method="post">
-                <p>{{form.username}}</p>
-                <p>{{form.password}}</p>
-            
-                <p>{{errors}}</p>
-                {{other_errors}}
-                {% csrf_token %}
-                <button type="submit" class="button_to_submit">Ok</button>
-        </form>
-        <a class="redirect_to_log_reg" href="{% url 'registration' %}">First? Registration</a>
+    <h1>Create Product</h1>
+        <form method="post">
+        {{form.as_p}}
+        {% csrf_token %}
+    <button type="submit" class="button_to_submit">Создать</button>
+
+    </form>
+    <a class="redirect_to_log_reg" href="{% url 'login' %}"> Already have an account? Login</a>
     </div>
 </body>
 </html>

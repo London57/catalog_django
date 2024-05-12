@@ -48,6 +48,5 @@ class LoginView(View):
                 login(request, user)
                 return redirect('my_profile')
             return render(request, 'login.html', {'form': LoginUserForm, 'errors': 'Invalid username or password'})
-        if form.errors:
-            print(form.errors)
+        
         return render(request, 'login.html', {'form': LoginUserForm, 'other_errors':form.errors})
