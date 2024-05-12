@@ -28,6 +28,7 @@ class RegistrationView(View):
             # form.cleaned_data['password'] = form.clean_password2()
             form.save()
             return redirect('login')
+        print(form.errors)
         return render(request, 'registration.html', context={'form': RegistrationUserForm,
                                                               'errors':form.errors})
     

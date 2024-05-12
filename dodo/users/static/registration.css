@@ -1,24 +1,33 @@
 
 /* форма логина */
-.form {
+.registration_form {
     display:flex;
     flex-direction: column;
-
     position: relative;
-    height: 60vh;
     margin-top:20vh;
-    margin-bottom: 20vh;
     margin-left: 20vw;
     margin-right: 20vw;
     resize: vertical, horizontal;
-    
     padding: 4em 5em;
     border: 1.5px solid black;
     border-radius: 1em;
     overflow: auto;
-
 }
 
+.login_form {
+    display:flex;
+    flex-direction: column;
+    position: relative;
+    
+    margin-top:20vh;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    resize: vertical, horizontal;
+    padding: 4em 5em;
+    border: 1.5px solid black;
+    border-radius: 1em;
+    overflow: auto;
+}
 
 
 .button_to_submit {
@@ -29,4 +38,7 @@
 
 .redirect_to_log_reg {
     font-style: none;
+    margin-bottom:auto;
+    padding-top: 2%;
+    padding-bottom: auto;
 }

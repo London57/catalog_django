@@ -1,0 +1,14 @@
+
+.header {
+    background-color: antiquewhite;
+    height: 20vh;
+}
+
+.footer {
+    display:flex;
+    position: relative;
+    background-color:rgb(23, 18, 78);
+    margin-top:18vh;
+    height: 20vh;
+}
+

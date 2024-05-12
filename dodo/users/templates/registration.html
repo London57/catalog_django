@@ -1,33 +1,28 @@
+{% extends 'base.html' %}
 {% load static %}
 
-<DOCTYPE html>
-<html lang="en">
-<head>
-    <!--Bootstrap5-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="{% static 'registration.css'%}">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-
-    <div class="form">
+{% block head %}
+<link rel="stylesheet" href="{% static 'registration.css'%}">
+{% endblock %}
+{% block content %}
+<div class="registration_form">
     <h1>Registration</h1>
-        <form method="post">
-    <p>{{form.username}}</p>
-    <p>{{form.email}}</p>
-    <p>{{form.password1}}</p>
-    <p>{{form.password2}}</p>
-   
-    <p>{{errors}}</p>
-    {% csrf_token %}
-    <button type="submit" class="button_to_submit">Ok</button>
-
-    </form>
+        <form method="post" class="form">    
+            <p>{{form.username}}</p>
+            <p>{{form.email}}</p>
+            <p>{{form.password1}}</p>
+            <p>{{form.password2}}</p>
+            <p class="form_errors">{{errors}}</p>
+            {% csrf_token %}
+            <button type="submit" class="button_to_submit">Ok</button>
+        </form>
     <a class="redirect_to_log_reg" href="{% url 'login' %}"> Already have an account? Login</a>
-    </div>
-</body>
-</html>
+</div>
+
+{% endblock %}
+
+{% block script %}
+<script src="{% static 'js/formErrors.js' %}"></script>
+
+<script></script>
+{% endblock %}

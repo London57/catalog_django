@@ -7,7 +7,8 @@ class CustomUser(AbstractUser):
         unique=True,
     )
     password = models.CharField(
-        max_length = 20
+        max_length = 20,
+        verbose_name='password'
     )
     class Meta:
         verbose_name = 'user'
